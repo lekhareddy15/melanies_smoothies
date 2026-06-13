@@ -14,11 +14,12 @@ st.write(
 title = st.text_input("Movie title", "Life of Brian")
 st.write("The current movie title is", title)
 
-#my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 ingredients_list= st.multiselect(
     'Choose up to 5 ingredients:'
-    , max_selections=5
+    , my_dataframe
+  ,max_selections=5
 )
 
 if ingredients_list:
