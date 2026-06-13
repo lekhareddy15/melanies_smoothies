@@ -18,7 +18,6 @@ st.write("The current movie title is", title)
 #st.dataframe(data=my_dataframe, use_container_width=True)
 ingredients_list= st.multiselect(
     'Choose up to 5 ingredients:'
-    , my_dataframe
     , max_selections=5
 )
 
