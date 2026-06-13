@@ -14,7 +14,6 @@ st.write(
 title = st.text_input("Movie title", "Life of Brian")
 st.write("The current movie title is", title)
 
-session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 ingredients_list= st.multiselect(
